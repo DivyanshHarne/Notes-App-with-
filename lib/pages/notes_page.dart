@@ -34,6 +34,7 @@ class _NotesPageState extends State<NotesPage>{
 
       content: TextField(
         controller: textController,
+        decoration: InputDecoration(hintText: "Add a new note."),
       ),
       actions: [
         //create button
@@ -63,7 +64,7 @@ class _NotesPageState extends State<NotesPage>{
     showDialog(
         context: context,
         builder: (context)=>AlertDialog(
-          title: Text("Update Note"),
+          title: const Text("Update Note"),
           backgroundColor: Theme.of(context).colorScheme.background,
           content: TextField(controller: textController),
           actions: [
@@ -77,7 +78,7 @@ class _NotesPageState extends State<NotesPage>{
                 // pop the dialog
                 Navigator.pop(context);
               },
-              child: const Text("Create"),
+              child: const Text("Update"),
             )
           ],
         )

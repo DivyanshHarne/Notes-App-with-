@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DrawerTile extends StatelessWidget {
   final String title;
@@ -12,7 +13,10 @@ class DrawerTile extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.only(left: 25.0),
       child: ListTile(
-        title: Text(title, style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),),
+        title: Text(title,  style: GoogleFonts.dmSerifText(
+            fontSize: 18,
+            color: Theme.of(context).colorScheme.inversePrimary
+        ),),
         leading: leading,
         onTap: onTap,
       ),
